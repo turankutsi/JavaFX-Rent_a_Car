@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="782.0" prefWidth="1178.0" style="-fx-background-color: #36394B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserPage.CarPages.carPagesClass">
+    <children>
+        <Pane layoutY="14.0" prefHeight="750.0" prefWidth="247.0" style="-fx-background-color: #36394B;">
+            <children>
+                <ImageView fitHeight="98.0" fitWidth="126.0" layoutX="75.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../Images/car.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="55.0" layoutY="102.0" prefHeight="7.0" prefWidth="138.0" text="Car Rental" textFill="#a0a2ab">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+                <Line endX="-33.0" layoutX="101.0" layoutY="147.0" startX="-100.0" stroke="#abacb5" />
+                <AnchorPane layoutX="4.0" layoutY="179.0" prefHeight="170.0" prefWidth="240.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="210.0" text="Welcome to the page" textFill="#a0a2ab">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="41.0" prefHeight="27.0" prefWidth="178.0" text="Here, you will find" textFill="#a0a2ab">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="68.0" prefHeight="27.0" prefWidth="178.0" text="cars information and" textFill="#a0a2ab">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="95.0" prefHeight="27.0" prefWidth="178.0" text="you can rent a car" textFill="#a0a2ab">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Line endX="106.0" layoutX="121.0" layoutY="686.0" startX="-100.0" stroke="WHITE" />
+                <Separator layoutX="246.0" orientation="VERTICAL" prefHeight="750.0" prefWidth="6.0" />
+                <Label layoutX="9.0" layoutY="713.0" prefHeight="27.0" prefWidth="229.0" text="Welcome ," textFill="#b9b9b9">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <AnchorPane layoutX="247.0" layoutY="15.0" prefHeight="750.0" prefWidth="917.0" style="-fx-background-color: EEEEEE;">
+            <children>
+                <Pane prefHeight="310.0" prefWidth="917.0" style="-fx-background-color: F7F7F7;">
+                    <children>
+                        <JFXButton layoutX="14.0" layoutY="14.0" onAction="#goBack" prefHeight="30.0" prefWidth="38.0" style="-fx-background-color: EEEEEE;" text="&lt;" textFill="#a0a2ab">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </JFXButton>
+                        <Label alignment="CENTER" layoutX="92.0" layoutY="275.0" prefHeight="27.0" prefWidth="229.0" text="CAR SPECIFICATION" textFill="#a0a2ab">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <JFXButton layoutX="765.0" layoutY="242.0" prefHeight="54.0" prefWidth="138.0" style="-fx-background-color: #2196F3; -fx-border-color: EEEEEE;" textFill="WHITE" />
+                  <ImageView fitHeight="226.0" fitWidth="311.0" layoutX="66.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Cars/a6.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </Pane>
+                <Pane layoutX="75.0" layoutY="375.0" prefHeight="376.0" prefWidth="842.0" style="-fx-background-color: F7F7F7;">
+                    <children>
+                        <Label layoutX="63.0" layoutY="54.0" text="Label" />
+                        <Separator layoutX="337.0" layoutY="54.0" orientation="VERTICAL" prefHeight="200.0">
+                            <cursor>
+                                <Cursor fx:constant="S_RESIZE" />
+                            </cursor>
+                        </Separator>
+                    </children>
+                </Pane>
+                <Line endX="82.0" layoutX="210.0" layoutY="309.0" startX="-90.0" stroke="#abacb5" strokeWidth="3.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

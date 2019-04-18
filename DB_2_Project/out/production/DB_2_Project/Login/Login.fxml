@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="342.0" prefWidth="456.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.Controller">
+   <children>
+      <JFXTextField fx:id="username" layoutX="177.0" layoutY="161.0" promptText="Username" style="-fx-text-fill: #A0A2AB;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" layoutX="177.0" layoutY="230.0" promptText="Password" style="-fx-text-fill: #A0A2AB;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btnSignUp" layoutX="236.0" layoutY="285.0" onAction="#goSignUp" prefHeight="43.0" prefWidth="88.0" style="-fx-background-color: #151928; -fx-border-color: #A0A2AB;" text="Sign UP" textFill="#a0a2ab" />
+      <ImageView fitHeight="110.0" fitWidth="119.0" layoutX="173.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/car.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="133.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="133.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/key.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="179.0" layoutY="109.0" text="Car" textFill="#2196f3">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="218.0" layoutY="109.0" text="Rental" textFill="#a0a2ab">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnLogin" layoutX="140.0" layoutY="285.0" onAction="#beAdmin" prefHeight="43.0" prefWidth="88.0" style="-fx-background-color: #2196f3; -fx-border-color: #A0A2AB;" text="Sign In" textFill="WHITE" />
+   </children>
+</AnchorPane>

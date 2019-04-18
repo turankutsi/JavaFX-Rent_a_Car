@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="782.0" prefWidth="1178.0" style="-fx-background-color: #36394B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserPage.ShowCarsController">
+   <children>
+      <Pane layoutY="14.0" prefHeight="750.0" prefWidth="247.0" style="-fx-background-color: #36394B;">
+         <children>
+            <ImageView fitHeight="98.0" fitWidth="126.0" layoutX="75.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/car.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="55.0" layoutY="102.0" prefHeight="7.0" prefWidth="138.0" text="Car Rental" textFill="#a0a2ab">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Line endX="-33.0" layoutX="101.0" layoutY="147.0" startX="-100.0" stroke="#abacb5" />
+            <AnchorPane layoutX="4.0" layoutY="179.0" prefHeight="170.0" prefWidth="240.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="210.0" text="Welcome to the page" textFill="#a0a2ab">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="41.0" prefHeight="27.0" prefWidth="178.0" text="Here, you will find" textFill="#a0a2ab">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="68.0" prefHeight="27.0" prefWidth="178.0" text="cars information and" textFill="#a0a2ab">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="95.0" prefHeight="27.0" prefWidth="178.0" text="you can rent a car" textFill="#a0a2ab">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Line endX="106.0" layoutX="121.0" layoutY="581.0" startX="-100.0" stroke="WHITE" />
+            <JFXButton layoutX="53.0" layoutY="633.0" prefHeight="45.0" prefWidth="131.0" style="-fx-border-color: white;" text="CONTACT US" textFill="#d7d3d3" />
+            <Separator layoutX="246.0" layoutY="69.0" orientation="VERTICAL" prefHeight="681.0" prefWidth="4.0" />
+         </children>
+      </Pane>
+      <Label layoutX="536.0" layoutY="20.0" prefHeight="55.0" prefWidth="265.0" text="Welcome ," textFill="#b9b9b9">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="247.0" layoutY="83.0" prefHeight="681.0" prefWidth="829.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1600.0" prefWidth="808.0">
+               <children>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="76.0" layoutY="41.0" onAction="#goLinea" prefHeight="98.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="Fiat Linea" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/Linea.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="316.0" layoutY="41.0" onAction="#goClio" prefHeight="98.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="Renault Clio" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/Clio.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="551.0" layoutY="41.0" onAction="#goVolk" prefHeight="98.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="Volkswagen Polo" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/Golf.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="76.0" layoutY="201.0" onAction="#go320" prefHeight="98.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="BMW 320i" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="102.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/320i.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="316.0" layoutY="201.0" onAction="#go520" prefHeight="98.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="BMW 520i" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/520i.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="551.0" layoutY="201.0" onAction="#goAudi" prefHeight="98.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="Audi A6" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/a6.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="76.0" layoutY="361.0" onAction="#go3008" prefHeight="98.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="Peugeot 3008" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/3008.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="316.0" layoutY="361.0" onAction="#go5008" prefHeight="98.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="Peugeot 5008" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/5008.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="551.0" layoutY="361.0" onAction="#goVolvo" prefHeight="98.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="Volvo XC90" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/XC90.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="76.0" layoutY="521.0" onAction="#goG55" prefHeight="140.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="Mercedes G55 AMG" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/g55.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="316.0" layoutY="521.0" onAction="#goRolls" prefHeight="140.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="Rolls Royce Dawn" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/rollllls.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="551.0" layoutY="521.0" onAction="#goBent" prefHeight="140.0" prefWidth="156.0" style="-fx-background-color: #36394B;" text="Bentley Continental" textFill="#dadada">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Cars/bentttt.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <TableView fx:id="table" layoutX="14.0" layoutY="934.0" prefHeight="421.0" prefWidth="793.0">
+                    <columns>
+                      <TableColumn fx:id="a" text="Car Id" />
+                      <TableColumn fx:id="b" prefWidth="105.0" text="Make" />
+                        <TableColumn fx:id="c" prefWidth="105.0" text="Model" />
+                        <TableColumn fx:id="d" text="Year" />
+                        <TableColumn fx:id="e" prefWidth="105.0" text="Rental Fee" />
+                        <TableColumn fx:id="f" prefWidth="105.0" text="Fuel" />
+                        <TableColumn fx:id="g" prefWidth="105.0" text="Gearbox" />
+                        <TableColumn fx:id="h" prefWidth="105.0" text="Class" />
+                    </columns>
+                  </TableView>
+                  <JFXButton alignment="CENTER" layoutX="14.0" layoutY="1372.0" onAction="#Push" style="-fx-background-color: #151928; -fx-border-color: #A0A2AB;" text="Show All" textFill="#a0a2ab" />
+                  <JFXButton alignment="CENTER" layoutX="115.0" layoutY="1372.0" onAction="#showSUV" style="-fx-background-color: #2196F3; -fx-border-color: #A0A2AB;" text="SUV" textFill="#eeeeee" />
+                  <JFXButton alignment="CENTER" layoutX="168.0" layoutY="1372.0" onAction="#showEco" style="-fx-background-color: #2196F3; -fx-border-color: #A0A2AB;" text="Economic" textFill="#eeeeee" />
+                  <JFXButton alignment="CENTER" layoutX="260.0" layoutY="1372.0" onAction="#showPro" style="-fx-background-color: #2196F3; -fx-border-color: #A0A2AB;" text="Pro" textFill="#eeeeee" />
+                  <JFXButton alignment="CENTER" layoutX="310.0" layoutY="1372.0" onAction="#showEx" style="-fx-background-color: dacf00; -fx-border-color: #2196F3;" text="Exclusive" textFill="#2196f3" />
+                  <Label alignment="CENTER" layoutX="187.0" layoutY="778.0" prefHeight="86.0" prefWidth="434.0" text="Cars in Table View" textFill="#36394b">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="164.0" layoutY="830.0" prefHeight="34.0" prefWidth="480.0" />
+                  <JFXButton alignment="BASELINE_RIGHT" layoutX="62.0" layoutY="887.0" onAction="#peu" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Makes/peugeot.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="132.0" layoutY="887.0" onAction="#volk" prefHeight="30.0" prefWidth="30.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Makes/volkswagen.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="202.0" layoutY="887.0" onAction="#ren" prefHeight="30.0" prefWidth="30.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Makes/renault.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="272.0" layoutY="887.0" onAction="#fia" prefHeight="30.0" prefWidth="30.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Makes/fiat.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="342.0" layoutY="887.0" onAction="#bmw" prefHeight="30.0" prefWidth="30.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Makes/bmw.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="422.0" layoutY="887.0" onAction="#ben" prefHeight="30.0" prefWidth="30.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Makes/icons8-bentley-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="492.0" layoutY="887.0" onAction="#aui" prefHeight="30.0" prefWidth="30.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Makes/icons8-audi-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="562.0" layoutY="887.0" onAction="#volv" prefHeight="30.0" prefWidth="30.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Makes/volvo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_RIGHT" layoutX="632.0" layoutY="887.0" onAction="#rols" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Makes/icons8-rolls-royce-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="702.0" layoutY="887.0" onAction="#mer" prefHeight="30.0" prefWidth="30.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Makes/mercedes-benz.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

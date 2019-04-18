@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="508.0" prefWidth="300.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserPage.UserPageClass">
+   <children>
+      <ImageView fitHeight="85.0" fitWidth="104.0" layoutX="107.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/car.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="98.0" layoutY="113.0" text="User" textFill="#2196f3">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="148.0" layoutY="113.0" text="Menu" textFill="#a0a2ab">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnShowCars" layoutX="81.0" layoutY="169.0" onAction="#ShowCars" prefHeight="69.0" prefWidth="139.0" style="-fx-background-color: #2196F3; -fx-border-color: #A0A2AB;" text="Show Cars" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
