@@ -14,9 +14,7 @@ import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Random;
 
 public class SignUpClass {
@@ -90,10 +88,29 @@ public class SignUpClass {
 
             else if(Male.isSelected() == true)
             {
-                String sql = "INSERT INTO user_info VALUES('"+id+"','"+name.getText()+"','"+surname.getText()+"'," +
+
+                Conn.DBConnection connectionClass = new Conn.DBConnection();
+                Connection connection = connectionClass.Connect();
+
+                ResultSet rs;
+
+                /*String sql = "INSERT INTO user_info VALUES('"+id+"','"+name.getText()+"','"+surname.getText()+"'," +
                         "'"+username.getText()+"','"+password.getText()+"','"+Male.getText()+"','"+mail.getText()+"')";
                 Statement statement = conn.createStatement();
-                statement.executeUpdate(sql);
+                statement.executeUpdate(sql);*/
+
+                String query="{call SignUp(?,?,?,?,?,?,?)}";
+
+                CallableStatement stmt=connection.prepareCall(query);
+                stmt.setInt(1, id);
+                stmt.setString(2,name.getText());
+                stmt.setString(3,surname.getText());
+                stmt.setString(4,username.getText());
+                stmt.setString(5,password.getText());
+                stmt.setString(6,Male.getText());
+                stmt.setString(7,mail.getText());
+
+                rs=stmt.executeQuery();
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Success!");

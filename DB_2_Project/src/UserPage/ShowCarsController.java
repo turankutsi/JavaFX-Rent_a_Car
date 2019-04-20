@@ -1,5 +1,6 @@
 package UserPage;
 
+import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTreeTableColumn;
 import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.controls.RecursiveTreeItem;
@@ -16,10 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeTableColumn;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Callback;
@@ -40,11 +38,25 @@ public class ShowCarsController implements Initializable {
     public TableView<Car> table;
     public TableColumn<?, ?> a,b,c,d,e,f,g,h;
     public ObservableList<UserPage.Car>data;
+    public Label lblUserName;
 
     Conn.DBConnection connectionClass = new Conn.DBConnection();
     Connection connection = connectionClass.Connect();
 
     private Stage stage = new Stage();
+
+    public void logOut(ActionEvent event) throws IOException, SQLException {
+        ((Node) (event.getSource())).getScene().getWindow().hide();
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../Login/Login.fxml"));
+        Parent p1 = loader2.load();
+
+        stage.setTitle("User Screen");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
+        stage.show();
+
+        connection.close();
+    }
 
     public void peu(ActionEvent event){
         try {
@@ -75,7 +87,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void volk(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -105,7 +116,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void ren(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -135,7 +145,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void fia(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -165,7 +174,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void bmw(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -195,7 +203,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void ben(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -225,7 +232,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void aui(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -255,7 +261,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void volv(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -285,7 +290,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void rols(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -315,7 +319,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void mer(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -345,6 +348,7 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
+
 
     public void Push(ActionEvent event){
 
@@ -377,7 +381,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(data);
 
     }
-
     public void showSUV(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -407,7 +410,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void showEco(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -437,7 +439,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void showPro(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -467,7 +468,6 @@ public class ShowCarsController implements Initializable {
         table.setItems(null);
         table.setItems(data);
     }
-
     public void showEx(ActionEvent event){
         try {
             data = FXCollections.observableArrayList();
@@ -498,125 +498,176 @@ public class ShowCarsController implements Initializable {
         table.setItems(data);
     }
 
+
     public void goLinea(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/linea.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/linea.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars12(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("Fiat Linea");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
-
     public void goClio(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/clio.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/clio.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars11(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("Renault Clio");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
-
     public void goVolk(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/polo.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/polo.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars10(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("Volkswagen Polo");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
-
     public void go320(ActionEvent event) throws IOException {
-        ((Node) (event.getSource())).getScene().getWindow().hide();
+        /*((Node) (event.getSource())).getScene().getWindow().hide();
         Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/320.fxml"));
         Scene scnSignin = new Scene(p1);
 
         stage.setTitle("Car Rental - Fiat Linea");
         stage.setScene(scnSignin);
-        stage.show();
-    }
+        stage.show();*/
 
+        ((Node) (event.getSource())).getScene().getWindow().hide();
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/320.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars(lblUserName.getText());
+
+
+        stage.setTitle("BMW 320i");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
+        stage.show();
+
+    }
     public void go520(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/520.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/520.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars2(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("BMW 520i");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
-
     public void goAudi(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/a6.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("/UserPage/CarPages/a6.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars3(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("Audi A6");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
-
     public void go3008(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/3008.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/3008.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars4(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("Peugeot 3008");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
-
     public void go5008(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/5008.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/5008.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars5(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("Peugeot 5008");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
-
     public void goVolvo(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/xc90.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/xc90.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars6(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("Volvo XC90");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
-
     public void goG55(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/g55.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/g55.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars7(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("Mercedes G55 AMG");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
-
     public void goRolls(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/rollsRoyce.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/rollsRoyce.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars8(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("Rolls Royce Dawn");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
-
     public void goBent(ActionEvent event) throws IOException {
         ((Node) (event.getSource())).getScene().getWindow().hide();
-        Parent p1 = FXMLLoader.load(getClass().getResource("../UserPage/CarPages/bentley.fxml"));
-        Scene scnSignin = new Scene(p1);
+        FXMLLoader loader2=new FXMLLoader(getClass().getResource("../UserPage/CarPages/bentley.fxml"));
+        Parent p1 = loader2.load();
+        UserPage.CarPages.carPagesClass fourthController = loader2.getController();
+        fourthController.setlblUsernameFromShowCars9(lblUserName.getText());
 
-        stage.setTitle("Car Rental - Fiat Linea");
-        stage.setScene(scnSignin);
+
+        stage.setTitle("Bentley Continental");
+        Scene scene2 = new Scene(p1);
+        stage.setScene(scene2);
         stage.show();
     }
+
+
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -719,6 +770,19 @@ public class ShowCarsController implements Initializable {
         table.getColumns().setAll(car_id,make,model,year,rental_fee,fuel,gearbox,_class);
         table.setRoot(root);
         table.setShowRoot(false);*/
+
+    }
+
+
+
+    public void setlblUsernameFromLogin(String text){
+
+        lblUserName.setText(text);
+    }
+
+    public void setlblUsernameFromCarPages(String text){
+
+        lblUserName.setText(text);
 
     }
 
